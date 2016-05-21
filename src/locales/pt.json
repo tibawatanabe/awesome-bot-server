@@ -1,0 +1,14 @@
+{
+  "app.error.database": "Erro de conexão com o banco de dados",
+  "app.error.404": "Serviço não encontrado",
+  "app.error.validation %s": "Campo '%s' inválido",
+  "app.error.unauthorized": "Acesso não autorizado",
+
+  "login.error.invalid": "Usuário ou senha inválida",
+  "login.message.ok": "Usuário autenticado com sucesso",
+
+  "app.error.appversion.null": "Versão de aplicação não foi enviada corretamente",
+  "app.error.appversion.wrong": "Sua aplicação precisa de uma atualização, por favor visite a loja para atualizá-la",
+  "app.error.session.expired": "Sessão expirada",
+  "app.error.general": "Não foi possível completar esta operação"
+}

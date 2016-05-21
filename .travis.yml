@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "0.12"
+  - "4.2" #to make sure it builds, passes tests and can be upgraded to 4.2 when time comes
+services:
+  - mongodb
+# https://github.com/indigotech/knowledge_base/wiki/Travis-CI#build-whitelist
+# whitelist
+branches:
+  only:
+    - master
+    - develop
+    - /^\d+\.\d+\.\d+(-(alpha|beta|rc)\.\d+)?$/ #tags
+    - /^release\/.+$/
+script:
+  - npm run travis
