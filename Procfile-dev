@@ -1,0 +1,2 @@
+web: grunt
+# example: coffee src/worker-runner.coffee src/workers/example

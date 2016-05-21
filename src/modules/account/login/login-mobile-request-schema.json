@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties":
+  {
+    "password": {"type": "string", "required": true, "pattern": "^.{6,}$"},
+    "email": {"type": "string", "required": true, "format": "email"}
+  }
+}
