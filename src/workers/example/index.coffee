@@ -16,6 +16,7 @@ require('tq1-logger')(core.config.loggerOptions, console)
 db = {}
 db.schemas = {}
 db.schemas.user = require('src/db/schemas/user') worker.dataHandling.Schema
+db.schemas.device = require('src/db/schemas/device') worker.dataHandling.Schema
 db.db = require('src/db/db') worker.dataHandling.Model, db.schemas
 
 job = require('src/workers/example/job')(core.config, db.db)

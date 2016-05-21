@@ -1,7 +1,7 @@
 {
-  "name": "br-taqtile-node_base_project-server-api",
+  "name": "awesome-bot-server",
   "version": "0.1.0",
-  "description": "Base project for Node.js servers and APIs",
+  "description": "AwesomeBot Server - Node.js - API Server",
   "main": "index.js",
   "scripts": {
     "start": "nf start -j ./Procfile-dev",
