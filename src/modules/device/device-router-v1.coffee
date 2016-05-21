@@ -7,7 +7,6 @@ module.exports = (module, middlewares) ->
     router.get '/devices',
       (req, res) ->
         controllers.list.exec (response) ->
-          console.log response
           return response.send(res)
 
     router.post '/devices',
@@ -15,18 +14,23 @@ module.exports = (module, middlewares) ->
       (req, res) ->
         controllers.create.exec req.body,
           (response) ->
-            console.log response
             return response.send(res)
 
-    # router.put '/devices/:id',
-    #   middlewares.mobileRequestValidator schemas.edit, 'body'
-    #   (req, res) ->
-    #     controllers.edit.exec req.params.id,
-    #       (response) ->
-    #         return response.send(res)
+    router.get '/devices/:id',
+      (req, res) ->
+        controllers.detail.exec req.params.id,
+          (response) ->
+            return response.send(res)
 
-    # router.delete '/devices/:id',
-    #   (req, res) ->
-    #     controllers.delete.exec req.params.id,
-    #       (response) ->
-    #         return response.send(res)
+    router.put '/devices/:id',
+      middlewares.mobileRequestValidator schemas.edit, 'body'
+      (req, res) ->
+        controllers.edit.exec req.params.id, req.body,
+          (response) ->
+            return response.send(res)
+
+    router.delete '/devices/:id',
+      (req, res) ->
+        controllers.delete.exec req.params.id,
+          (response) ->
+            return response.send(res)

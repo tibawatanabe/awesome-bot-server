@@ -13,4 +13,7 @@ module.exports = () ->
     @USER_AUTHENTICATED = "Usuário autenticado com sucesso"
     @USER_INVALID_PASSWORD = "Usuário e/ou senha inválidos."
 
+    @DEVICE_NOT_FOUND = "Device não encontrado."
+
+
   Object.freeze(ResponseMessage)
