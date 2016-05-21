@@ -63,9 +63,13 @@ account.controllers.login = require('src/modules/account/login/login-controller'
 device = {}
 device.schemas = {}
 device.schemas.create = require('src/modules/device/create/device-create-schema.json')
+device.schemas.edit = require('src/modules/device/edit/device-edit-schema.json')
 device.controllers = {}
 device.controllers.create = require('src/modules/device/create/device-create-controller') core.http, db.db
 device.controllers.list = require('src/modules/device/list/device-list-controller') core.http, db.db, app._
+device.controllers.detail = require('src/modules/device/detail/device-detail-controller') core.http, db.db
+device.controllers.edit = require('src/modules/device/edit/device-edit-controller') core.http, db.db
+device.controllers.delete = require('src/modules/device/delete/device-delete-controller') core.http, db.db
 
 # Routes
 routes = {}

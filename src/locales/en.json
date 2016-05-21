@@ -1,7 +1,6 @@
 {
   "app.error.database": "Database connection error",
   "app.error.404": "Resource not found",
-  "app.error.accessGroup": "User searched does not bellong to correct access group",
   "app.error.validation %s": "Field '%s' is invalid",
   "app.error.unauthorized": "Access not authorized",
 
