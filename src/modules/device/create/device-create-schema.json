@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties":
+  {
+    "model": {"type": "string"},
+    "os": {"type": "string"},
+    "version": {"type": "string"},
+    "notes": {"type": "string"},
+    "owner": {"type": "string"},
+    "status": {"type": "string"},
+    "date": {"type": "string"},
+    "user": {"type": "string"}
+  },
+  "additionalProperties": false
+}

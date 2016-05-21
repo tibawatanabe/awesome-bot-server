@@ -43,6 +43,7 @@ core.http.responseMessage = require('src/core/http/response-message.coffee')()
 db = {}
 db.schemas = {}
 db.schemas.user = require('src/db/schemas/user') app.dataHandling.Schema
+db.schemas.device = require('src/db/schemas/device') app.dataHandling.Schema
 db.db = require('src/db/db') app.dataHandling.Model, db.schemas
 
 # Common middlewares
@@ -58,11 +59,20 @@ account.schemas.loginRequest = require('src/modules/account/login/login-mobile-r
 account.controllers = {}
 account.controllers.login = require('src/modules/account/login/login-controller') core.http, db.db, common.middlewares, core.helpers.auth
 
+# Device
+device = {}
+device.schemas = {}
+device.schemas.create = require('src/modules/device/create/device-create-schema.json')
+device.controllers = {}
+device.controllers.create = require('src/modules/device/create/device-create-controller') core.http, db.db
+device.controllers.list = require('src/modules/device/list/device-list-controller') core.http, db.db, app._
+
 # Routes
 routes = {}
 routes.routes = require('src/routes/routes') app.express, core.config, routes
 routes.v1 = {}
 routes.v1.account = require('src/modules/account/account-router-v1') account, common.middlewares
+routes.v1.device = require('src/modules/device/device-router-v1') device, common.middlewares
 
 module.exports =
   app: (callback) -> require('src/app') app.express, app.bodyParser, core.config, routes.routes, locale, callback
