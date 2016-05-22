@@ -2,6 +2,7 @@
   "type": "object",
   "properties":
   {
+    "id":{"type": "string"},
     "model": {"type": "string"},
     "os": {"type": "string"},
     "version": {"type": "string"},
