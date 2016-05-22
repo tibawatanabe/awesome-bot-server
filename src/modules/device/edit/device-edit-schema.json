@@ -2,15 +2,15 @@
   "type": "object",
   "properties":
   {
-    "id":{"type": "string"},
-    "model": {"type": "string"},
-    "os": {"type": "string"},
-    "version": {"type": "string"},
-    "notes": {"type": "string"},
-    "owner": {"type": "string"},
-    "status": {"type": "string"},
-    "date": {"type": "string"},
-    "user": {"type": "string"}
+    "id": {"type": "string"},
+    "model": {"type": ["string", "null"]},
+    "os": {"type": ["string", "null"]},
+    "version": {"type": ["string", "null"]},
+    "notes": {"type": ["string", "null"]},
+    "owner": {"type": ["string", "null"]},
+    "status": {"type": ["string", "null"]},
+    "date": {"type": ["date", "null", "string"]},
+    "user": {"type": ["string", "null"]}
   },
   "additionalProperties": false
 }
