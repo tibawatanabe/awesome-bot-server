@@ -1,5 +1,7 @@
 # awesome-bot-server - Node.js - API Server
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tibawatanabe/awesome-bot-server.svg)](https://greenkeeper.io/)
+
 ## Environment setup
 
 This is what do you need to run this project locally:
